@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "0cd7a0fb-d871-4b58-a3d7-ccf2ffa9f890",
+		"name": "TareaItems",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Items",
+			"item": [
+				{
+					"name": "/item/v1/listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_local}}/item/v1/listar",
+							"host": [
+								"{{url_local}}"
+							],
+							"path": [
+								"item",
+								"v1",
+								"listar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/item/v1/guardar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idItem\":2,\r\n\t\"item\":\"cuaderno\",\r\n\t\"cantidad\":20,\r\n    \"total\": 193\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_local}}/item/v1/guardar",
+							"host": [
+								"{{url_local}}"
+							],
+							"path": [
+								"item",
+								"v1",
+								"guardar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/item/v1/listar/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_local}}/item/v1/listar/2",
+							"host": [
+								"{{url_local}}"
+							],
+							"path": [
+								"item",
+								"v1",
+								"listar",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/item/v1/editar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idItem\":2,\r\n\t\"item\":\"cuaderno3\",\r\n\t\"cantidad\":20,\r\n    \"total\": 193\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_local}}/item/v1/editar",
+							"host": [
+								"{{url_local}}"
+							],
+							"path": [
+								"item",
+								"v1",
+								"editar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/item/v1/eliminar/{id}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url_local}}/item/v1/eliminar/2",
+							"host": [
+								"{{url_local}}"
+							],
+							"path": [
+								"item",
+								"v1",
+								"eliminar",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url_local",
+			"value": "127.0.0.1:7777",
+			"type": "default"
+		}
+	]
+}
